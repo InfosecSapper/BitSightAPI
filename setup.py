@@ -15,6 +15,9 @@ setup(
     url="https://github.com/infosecsapper/BitSightAPI",
     license='GPLv3',
     packages=find_packages(),
+    install_requires=[
+        'requests>=2.22.0'
+    ]
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
