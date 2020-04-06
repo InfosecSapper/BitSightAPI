@@ -19,10 +19,12 @@ class Session(object):
 
         self.api_key = key
         self.api_endpoint = '/v1'
+        self.api_variables = None
         self.api_paths = {
             'root': '/'
         }
         self.api_params = None
+
 
     def info(self, path='root', **params):
         """
@@ -31,7 +33,7 @@ class Session(object):
 
         if path not in self.api_paths:
             raise ValueError("ERROR: path must be one of %r." % self.api_paths)
-        url = API_URL + self.api_endpoint + self.api_paths[path]
+        url = API_URL + self.api_endpoint + self.api_paths[path] % self.api_variables
         info = self._call(url)
         return info
 

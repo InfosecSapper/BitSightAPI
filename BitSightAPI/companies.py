@@ -6,9 +6,13 @@ class Companies(Session):
     Companies class
     """
 
-    def __init__(self, session):
+    def __init__(self, session, companyguid='', domain=''):
         self.api_key = session.api_key
         self.api_endpoint = '/v1/companies'
+        self.api_variables = {
+            'companyguid': companyguid,
+            'domain': domain
+        }
         self.api_paths = {
             'root': '/',
             'company details': '/%(companyguid)s/',

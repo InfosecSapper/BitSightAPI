@@ -1,12 +1,13 @@
 from bitsightapi.client import Session
 
-class Alert(Session):
+class Alerts(Session):
     """
     This class handles the Alerts API endpoint
     """
     def __init__(self, session):
         self.api_key = session.api_key
         self.api_endpoint = '/v2/alerts'
+        self.api_variables = None
         self.api_paths = {
             'root': '/',
             'recent alerts': '/latest'
