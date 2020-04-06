@@ -6,30 +6,30 @@ class Companies(Session):
     Companies class
     """
 
-    def __init__(self, session, companyguid='', domain=''):
+    def __init__(self, session, company_guid='', domain=''):
         self.api_key = session.api_key
         self.api_endpoint = '/v1/companies'
         self.api_variables = {
-            'companyguid': companyguid,
+            'company_guid': company_guid,
             'domain': domain
         }
         self.api_paths = {
             'root': '/',
-            'company details': '/%(companyguid)s/',
-            'asset risk matrix': '/%(companyguid)s/assets/statistics',
-            'company tree': '/%(companyguid)s/company-tree',
-            'ip by country': '/%(companyguid)s/countries',
-            'products by domain': '/%(companyguid)s/domains/%(domain)s/products',
-            'providers by domain': '/%(companyguid)s/domains/%(domain)s/providers',
-            'findings': '/%(companyguid)s/findings',
-            'industry statistics': '/%(companyguid)s/industries/statistics',
-            'detailed': '/%(companyguid)s/observations',
-            'products': '/%(companyguid)s/products',
-            'service providers': '/%(companyguid)s/providers',
-            'nist report': '/%(companyguid)s/regulatory/nist',
-            'compare peers': '/%(companyguid)s/reports/company-preview',
-            'infrastructure': '/%(companyguid)s/reports/infrastructure',
-            'statistics': '/%(companyguid)s/observations/statistics',
+            'company details': '/%(company_guid)s/',
+            'asset risk matrix': '/%(company_guid)s/assets/statistics',
+            'company tree': '/%(company_guid)s/company-tree',
+            'ip by country': '/%(company_guid)s/countries',
+            'products by domain': '/%(company_guid)s/domains/%(domain)s/products',
+            'providers by domain': '/%(company_guid)s/domains/%(domain)s/providers',
+            'findings': '/%(company_guid)s/findings',
+            'industry statistics': '/%(company_guid)s/industries/statistics',
+            'detailed': '/%(company_guid)s/observations',
+            'products': '/%(company_guid)s/products',
+            'service providers': '/%(company_guid)s/providers',
+            'nist report': '/%(company_guid)s/regulatory/nist',
+            'compare peers': '/%(company_guid)s/reports/company-preview',
+            'infrastructure': '/%(company_guid)s/reports/infrastructure',
+            'statistics': '/%(company_guid)s/observations/statistics',
             'distribution': '/distribution',
             'ratings by date': '/'
         }
