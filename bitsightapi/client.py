@@ -1,4 +1,3 @@
-#import json
 import requests
 
 API_URL = 'https://api.bitsighttech.com/ratings'
