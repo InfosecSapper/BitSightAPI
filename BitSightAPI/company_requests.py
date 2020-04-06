@@ -1,15 +1,16 @@
-from bitsightapi import BitSightSession
+from bitsightapi.client import Session
 
 
-class CompanyRequests(BitSightSession):
+class CompanyRequests(Session):
     """
     Company Requests class
     """
 
-    def __init__(self, path, **params):
+    def __init__(self, session):
+        self.api_key = session.api_key
         self.api_endpoint = '/v1/company-requests'
         self.api_paths = {
-            'company requests': '/',
+            'root': '/',
             'request status': '/%(requestguid)s'
         }
         self.api_params = {}

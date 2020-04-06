@@ -1,7 +1,7 @@
-from bitsightapi import BitSightSession
+from bitsightapi.client import Session
 
 
-class CompanyRelationships(BitSightSession):
+class CompanyRelationships(Session):
     """
     Company Relationships class
     """
@@ -9,7 +9,7 @@ class CompanyRelationships(BitSightSession):
     def __init__(self, path, **params):
         self.api_endpoint = '/v1/company-relationships'
         self.api_paths = {
-            'company relationships': '/'
+            'root': '/'
         }
         self.api_params = {}
         pass

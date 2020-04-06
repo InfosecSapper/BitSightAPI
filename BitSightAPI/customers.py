@@ -1,15 +1,16 @@
-from bitsightapi import BitSightSession
+from bitsightapi.client import Session
 
 
-class Customers(BitSightSession):
+class Customers(Session):
     """
     Customers class
     """
 
-    def __init__(self, path, **params):
+    def __init__(self, session):
+        self.api_key = session.api_key
         self.api_endpoint = '/v1/customers/current/api-tokens'
         self.api_paths = {
-            'customers': '/'
+            'root': '/'
         }
         self.api_params = {}
         pass

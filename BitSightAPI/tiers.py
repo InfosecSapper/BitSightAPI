@@ -1,15 +1,16 @@
-from bitsightapi import BitSightSession
+from bitsightapi.client import Session
 
 
-class Tiers(BitSightSession):
+class Tiers(Session):
     """
     Tiers class
     """
 
-    def __init__(self, path, **params):
+    def __init__(self, session):
+        self.api_key = session.api_key
         self.api_endpoint = '/v1/tiers'
         self.api_paths = {
-            'tiers': '/',
+            'root': '/',
             'providers': '/%(tierguid)s/providers',
             'provider dependents': '/%(tierguid)s/providers/%(providerguid)s/companies',
             'provider products': '/%(tierguid)s/providers/%(providerguid)s/products'

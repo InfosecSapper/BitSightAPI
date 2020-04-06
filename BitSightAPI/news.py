@@ -1,15 +1,16 @@
-from bitsightapi import BitSightSession
+from bitsightapi.client import Session
 
 
-class News(BitSightSession):
+class News(Session):
     """
     News class
     """
 
-    def __init__(self, path, **params):
+    def __init__(self, session):
+        self.api_key = session.api_key
         self.api_endpoint = '/v1/news'
         self.api_paths = {
-            'news': '/'
+            'root': '/'
         }
         self.api_params = {}
         pass

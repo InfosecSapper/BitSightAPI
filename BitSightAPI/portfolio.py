@@ -1,15 +1,16 @@
-from bitsightapi import BitSightSession
+from bitsightapi.client import Session
 
 
-class Portfolio(BitSightSession):
+class Portfolio(Session):
     """
     Portfolio class
     """
 
-    def __init__(self, path, **params):
+    def __init__(self, session):
+        self.api_key = session.api_key
         self.api_endpoint = '/v1/portfolio'
         self.api_paths = {
-            'portfolio': '/',
+            'root': '/',
             'breaches': '/beaches',
             'contacts': '/contacts',
             'custom ids': '/entity-custom-ids',

@@ -1,12 +1,13 @@
-from bitsightapi import BitSightSession
+from bitsightapi.client import Session
 
 
-class RapidUnderwritingAssessments(BitSightSession):
+class RapidUnderwritingAssessments(Session):
     """
     Rapid Underwriting Assessments class
     """
 
-    def __init__(self, path, **params):
+    def __init__(self, session):
+        self.api_key = session.api_key
         self.api_paths = {}
         self.api_params = {}
         pass
