@@ -22,7 +22,6 @@ from bitsightapi import folders
 from bitsightapi import industries
 from bitsightapi import insights
 from bitsightapi import news
-from bitsightapi import portfolio_for_countries
 from bitsightapi import portfolio
 from bitsightapi import products
 from bitsightapi import rapid_underwriting_assessments
