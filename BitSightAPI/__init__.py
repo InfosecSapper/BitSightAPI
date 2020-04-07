@@ -18,6 +18,7 @@ from bitsightapi import companies
 from bitsightapi import company_relationships
 from bitsightapi import company_requests
 from bitsightapi import customers
+from bitsightapi import findings
 from bitsightapi import folders
 from bitsightapi import industries
 from bitsightapi import insights
