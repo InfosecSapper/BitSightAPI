@@ -21,4 +21,20 @@ class Tiers(Session):
             'provider dependents': '/%(tier_guid)s/providers/%(provider_guid)s/companies',
             'provider products': '/%(tier_guid)s/providers/%(provider_guid)s/products'
         }
-        self.api_params = {}
+        self.api_params = [
+            'limit',
+            'offset',
+            'q',
+            'sort',
+            'fields',
+            'data',
+            'description',
+            'companies',
+            'rank',
+            'email_enabled',
+            'guid',
+            'name'
+            'remove_companies',
+            'add_companies',
+            'relationship_type'
+        ]

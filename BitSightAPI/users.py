@@ -17,4 +17,11 @@ class Users(Session):
             'user': '/%(user_guid)s',
             'company views': '/%(user_guid)s/company-views'
         }
-        self.api_params = {}
+        self.api_params = [
+            'include_details',
+            'show_all',
+            'view_company',
+            'days_back',
+            'limit',
+            'folder'
+        ]

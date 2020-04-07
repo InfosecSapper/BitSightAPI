@@ -15,4 +15,9 @@ class Customers(Session):
         self.api_paths = {
             'root': '/'
         }
-        self.api_params = {}
+        self.api_params = [
+            'data',
+            'description',
+            'format',
+            'group'
+        ]

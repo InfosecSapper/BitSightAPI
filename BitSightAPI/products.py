@@ -15,4 +15,4 @@ class Products(Session):
         self.api_paths = {
             'root': '/%(product_guid)s/companies'
         }
-        self.api_params = {}
+        self.api_params = []

@@ -4,9 +4,7 @@ API_URL = 'https://api.bitsighttech.com/ratings'
 
 
 class Session(object):
-    """
-    This is the base class and provides a means to interact with the API.
-    """
+    """This is the base class and provides a means to interact with the API."""
 
     def __init__(self, key: str):
         """
@@ -18,22 +16,22 @@ class Session(object):
 
         self.api_key = key
         self.api_endpoint = '/v1'
-        self.api_variables = None
+        self.api_variables = {}
         self.api_paths = {
             'root': '/'
         }
-        self.api_params = None
+        self.api_params = []
 
 
     def info(self, path='root', **params):
-        """
-        This is the main function for returning data from the API.
-        """
-
+        """Return API data as JSON object."""
         if path not in self.api_paths:
             raise ValueError("ERROR: path must be one of %r." % self.api_paths)
+        for param in params:
+            if param not in self.api_params:
+                raise ValueError("ERROR: %s is not a valid parameter for this request! Valid parameters are: %r." % (param, self.api_params))
         url = API_URL + self.api_endpoint + self.api_paths[path] % self.api_variables
-        info = self._call(url)
+        info = self._call(url, **params)
         return info
 
 
@@ -55,5 +53,5 @@ class Session(object):
 
     
     def _call(self, url, **params):
-        data = requests.get(url, auth=(self.api_key, '')).json()
+        data = requests.get(url, params=params, auth=(self.api_key, '')).json()
         return data

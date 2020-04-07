@@ -16,4 +16,4 @@ class Industries(Session):
             'root': '/',
             'industry history': '/%(industry_slug)s'
         }
-        self.api_params = {}
+        self.api_params = []

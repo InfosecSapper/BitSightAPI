@@ -17,4 +17,4 @@ class CompanyRequests(Session):
             'root': '/',
             'request status': '/%(request_guid)s'
         }
-        self.api_params = {}
+        self.api_params = []

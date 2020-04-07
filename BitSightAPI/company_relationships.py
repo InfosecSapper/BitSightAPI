@@ -9,9 +9,11 @@ class CompanyRelationships(Session):
     def __init__(self, session):
         self.api_key = session.api_key
         self.api_endpoint = '/v1/company-relationships'
-        self.api_variables = None
+        self.api_variables = {}
         self.api_paths = {
             'root': '/'
         }
-        self.api_params = {}
-        pass
+        self.api_params = [
+            'company_guid',
+            'relationship_type'
+        ]

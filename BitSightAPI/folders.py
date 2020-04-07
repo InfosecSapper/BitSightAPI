@@ -23,4 +23,4 @@ class Folders(Session):
             'dependent companies': '/%(folder_guid)s/providers/%(provider_guid)s/companies',
             'provider products': '/%(folder_guid)s/providers/%(provider_guid)s/products'
         }
-        self.api_params = {}
+        self.api_params = []

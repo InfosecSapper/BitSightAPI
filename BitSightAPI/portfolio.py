@@ -28,4 +28,25 @@ class Portfolio(Session):
             'ratings': '/ratings',
             'statistics': '/statistics'
         }
-        self.api_params = {}
+        self.api_params = [
+            'company_guid',
+            'custom_id',
+            'email',
+            'end',
+            'exclude_alerts_only',
+            'fields',
+            'folder',
+            'formal_name',
+            'format',
+            'friendly_name',
+            'guid',
+            'name',
+            'phone_number',
+            'quarters_back',
+            'rating_date',
+            'show_ips',
+            'show_event_evidence',
+            'start',
+            'tier',
+            'types'
+        ]

@@ -33,4 +33,10 @@ class Companies(Session):
             'distribution': '/distribution',
             'ratings by date': '/'
         }
-        self.api_params = {}
+        self.api_params = [
+            'fields',
+            'limit',
+            'offset',
+            'q',
+            'sort'
+        ]
