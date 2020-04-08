@@ -1,4 +1,4 @@
-from bitsightapi.client import Session
+from BitSightAPI.client import Session
 
 
 class Reports(Session):
