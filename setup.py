@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="BitSightAPI",
-    version="1.0.0",
+    version="1.0.1",
     author="InfosecSapper",
     author_email="contact@infosecsapper.com",
     description="A Python wrapper for the BitSight API.",
