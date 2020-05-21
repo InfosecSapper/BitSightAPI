@@ -15,7 +15,7 @@ class Portfolio(Session):
         }
         self.api_paths = {
             'root': '/',
-            'breaches': '/beaches',
+            'breaches': '/breaches',
             'contacts': '/contacts',
             'edit contacts': '/contacts/%(user_guid)s',
             'custom ids': '/entity-custom-ids',
